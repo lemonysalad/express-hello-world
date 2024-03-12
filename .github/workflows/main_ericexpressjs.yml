@@ -59,4 +59,4 @@ jobs:
           app-name: 'ericexpressjs'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_15982628B08C4F4BA8A6D35B31838F2E }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_361ABBB777004DFB8B34C02E37730B04 }}
