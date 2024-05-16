@@ -60,3 +60,14 @@ jobs:
           slot-name: 'Production'
           package: .
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_04ABAB7C6E4945998A437C8A06500F76 }}
+
+      - name: "SSH into container"
+        run: |
+              sudo apt-get install -y expect
+              expect -c "
+              spawn az webapp ssh -n ssshtestt -g bhagyashrioss
+              expect \"#\"
+              send \"pwd\r\"   # replace with any linux command to test
+              expect \"#\"
+              send \"exit\r\"
+              "
