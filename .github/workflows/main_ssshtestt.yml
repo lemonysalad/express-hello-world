@@ -65,7 +65,7 @@ jobs:
         run: |
               sudo apt-get install -y expect
               expect -c "
-              spawn az webapp ssh -n ssshtestt -g bhagyashrioss
+              spawn az webapp ssh -n update -g bhagyashrioss
               expect \"#\"
               send \"pwd\r\"   # replace with any linux command to test
               expect \"#\"
