@@ -65,7 +65,7 @@ jobs:
         run: |
               sudo apt-get install -y expect
               expect -c "
-              spawn az webapp ssh -n update -g bhagyashrioss
+              spawn az webapp create-remote-connection --subscription 016800ee-fc90-4dd9-a1d3-b2b5ba963a75 --resource-group bhagyashrioss -n ssshtestt
               expect \"#\"
               send \"pwd\r\"   # replace with any linux command to test
               expect \"#\"
